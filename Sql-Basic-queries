@@ -6,3 +6,5 @@ Soln = Select concat(FIRST_NAME,'',LAST_NAME) as COMPLETE_NAME FROM Student;
 
 Write a SQL query to print details of the Students whose FIRST_NAME ends with 'a'
 Soln= Select * From Student Where FIRST_NAME Like '%a';
+
+
