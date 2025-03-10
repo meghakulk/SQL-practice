@@ -1,0 +1,8 @@
+Write a SQL query that fetches the unique values of MAJOR Subjects from Student table and print its length
+Soln= Select Distinct major,len(major) from student table
+
+Write a SQL query to print the FIRST_NAME and LAST_NAME from Student table into single column COMPLETE_NAME
+Soln = Select concat(FIRST_NAME,'',LAST_NAME) as COMPLETE_NAME FROM Student;
+
+Write a SQL query to print details of the Students whose FIRST_NAME ends with 'a'
+Soln= Select * From Student Where FIRST_NAME Like '%a';
