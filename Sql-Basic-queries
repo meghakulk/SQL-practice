@@ -1,3 +1,4 @@
+#geeksfor geeks
 Write a SQL query that fetches the unique values of MAJOR Subjects from Student table and print its length
 Soln= Select Distinct major,len(major) from student table
 
@@ -6,5 +7,28 @@ Soln = Select concat(FIRST_NAME,'',LAST_NAME) as COMPLETE_NAME FROM Student;
 
 Write a SQL query to print details of the Students whose FIRST_NAME ends with 'a'
 Soln= Select * From Student Where FIRST_NAME Like '%a';
+
+#coding ninjas
+Write a SQL query to find the names of employees who have not been assigned to any project
+Select employees.name
+from employees
+Left join Projects
+On employees.employee_id = projects.employee_id
+where projects.employee_id is NULL;
+
+In the Student table, the marks column contains a list of values separated by commas. How can you determine the number of values in this comma-separated list?
+Exception : u cant just add count(marks) because if u want to count marks in row so u need length based approach for this
+Table query : CREATE TABLE Student (
+	id INT NOT NULL,
+	name VARCHAR(50) NOT NULL,
+	marks VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO Student (id, name, marks)
+VALUES (1, 'Rohit', '87,92,76,89');
+
+Soln: Select id,name,length(marks) - length(REPLACE(marks,',',"))+1 AS num_marks
+From student
+where id=1;
 
 
